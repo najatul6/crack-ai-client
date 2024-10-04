@@ -5,7 +5,6 @@ import Error from "../pages/Error";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
-import Kitchen from "../pages/Kitchen";
 import Generate from "../pages/Generate";
 import PaintingDetails from "../pages/PaintingDetails";
 import Paintings from "../pages/Paintings";
