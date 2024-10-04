@@ -48,14 +48,14 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unscubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unScubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
     });
     return () => {
-      unscubscribe();
+      unScubscribe();
     };
-  }, []);
+  }, [auth]);
 
   const authInfo = {
     user,
