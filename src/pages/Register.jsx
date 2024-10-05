@@ -110,7 +110,7 @@ const Register = () => {
                   />
                 </div>
 
-                {/* <div className="flex justify-start items-center">
+                <div className="flex justify-start items-center">
                   <div className="">
                     <BiKey className="text-3xl text-slate-500"></BiKey>
                   </div>
@@ -120,7 +120,7 @@ const Register = () => {
                     name="pass-confirm"
                     placeholder="Confirm Password"
                   />
-                </div> */}
+                </div>
 
                 <input
                   type="submit"
