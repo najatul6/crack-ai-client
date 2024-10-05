@@ -7,10 +7,10 @@ import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { data } from "autoprefixer";
+// import { data } from "autoprefixer";
 
 import loginAnimation from "../assets/loginAnimation.json";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
