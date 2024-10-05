@@ -12,6 +12,7 @@ import Social from "../components/Social";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Register = () => {
   const goTo = useNavigate();
