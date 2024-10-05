@@ -4,7 +4,7 @@ import {
   BiEnvelope,
   BiImageAdd,
   BiKey,
-  BiRename,
+//   BiRename,
   BiUser,
 } from "react-icons/bi";
 import happy from "../assets/happy.json";
@@ -16,7 +16,9 @@ import axios from "axios";
 
 const Register = () => {
   const goTo = useNavigate();
-  const { createUser, signIn, user, setUser, updateUser } =
+  const { createUser, 
+    // signIn, user, 
+    setUser, updateUser } =
     useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,6 +45,7 @@ const Register = () => {
               console.log(res.data);
             });
         });
+        console.log(res.user);
       })
       .catch((error) => {
         console.log(error);
