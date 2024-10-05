@@ -5,9 +5,6 @@ import Error from "../pages/Error";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
-import Generate from "../pages/Generate";
-import PaintingDetails from "../pages/PaintingDetails";
-import Paintings from "../pages/Paintings";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -17,22 +14,22 @@ const MainRoutes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Home/>,
       },
       {
         path: "login",
-        element: <Login></Login>,
+        element: <Login/>,
       },
       {
         path: "paintings",
-        element: <Paintings></Paintings>,
+        element: <Paintings/>,
         loader: () => fetch("http://localhost:5000/api/v1/paintings"),
       },
       {
         path: "generate",
         element: (
           <PrivateRoute>
-            <Generate></Generate>
+            <Generate/>
           </PrivateRoute>
         ),
       },
@@ -40,7 +37,7 @@ const MainRoutes = createBrowserRouter([
         path: "/paintings/:id",
         element: (
           <PrivateRoute>
-            <PaintingDetails></PaintingDetails>
+            <PaintingDetails/>
           </PrivateRoute>
         ),
         loader: ({ params }) =>
@@ -48,7 +45,7 @@ const MainRoutes = createBrowserRouter([
       },
       {
         path: "registration",
-        element: <Register></Register>,
+        element: <Register/>,
       },
     ],
   },
