@@ -40,7 +40,7 @@ const Register = () => {
               { withCredentials: true }
             )
             .then((res) => {
-              setUser({ ...res.user, displayName: name, photoURL: image });
+            //   setUser({ ...res.user, displayName: name, photoURL: image });
               goTo(`${location.state ? location.state : "/"}`);
               console.log(res.data);
             });
