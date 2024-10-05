@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import Error from "../pages/Error";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import PrivateRoute from "./PrivateRoute";
+// import PrivateRoute from "./PrivateRoute";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -20,29 +20,29 @@ const MainRoutes = createBrowserRouter([
         path: "login",
         element: <Login/>,
       },
-      {
-        path: "paintings",
-        element: <Paintings/>,
-        loader: () => fetch("http://localhost:5000/api/v1/paintings"),
-      },
-      {
-        path: "generate",
-        element: (
-          <PrivateRoute>
-            <Generate/>
-          </PrivateRoute>
-        ),
-      },
-      {
-        path: "/paintings/:id",
-        element: (
-          <PrivateRoute>
-            <PaintingDetails/>
-          </PrivateRoute>
-        ),
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/v1/paintings/${params.id}`),
-      },
+      // {
+      //   path: "paintings",
+      //   element: <Paintings/>,
+      //   loader: () => fetch("http://localhost:5000/api/v1/paintings"),
+      // },
+      // {
+      //   path: "generate",
+      //   element: (
+      //     <PrivateRoute>
+      //       <Generate/>
+      //     </PrivateRoute>
+      //   ),
+      // },
+      // {
+      //   path: "/paintings/:id",
+      //   element: (
+      //     <PrivateRoute>
+      //       <PaintingDetails/>
+      //     </PrivateRoute>
+      //   ),
+      //   loader: ({ params }) =>
+      //     fetch(`http://localhost:5000/api/v1/paintings/${params.id}`),
+      // },
       {
         path: "registration",
         element: <Register/>,
