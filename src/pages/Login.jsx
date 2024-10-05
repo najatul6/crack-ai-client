@@ -27,7 +27,7 @@ const Login = () => {
     signIn(email, pass)
       .then((res) => {
         const user = res.user;
-        alert(`${user?.email}"successfull"`);
+        alert(`${user?.email} "is signIn successfull"`);
         // axios
         //   .post(
         //     "https://chef-note-server.vercel.app/jwt",
