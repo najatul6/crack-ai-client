@@ -1,17 +1,22 @@
 import Title from "../components/Title";
 
 const GeneratePainting = () => {
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+        console.log(e.target.prompt.value);
+    }
   return (
     <div className="container">
       <Title>GeneratePainting</Title>
 
-      <form className="flex flex-wrap gap-3 mt-10 justify-center w-full">
+      <form onSubmit={handleSubmit} className="flex flex-wrap gap-3 mt-10 justify-center w-full">
         <textarea
           type="text"
+          name="prompt"
           placeholder="What kind of painting you want ..."
-          className="textarea textarea-bordered w-11/12 py-4"
+          className="textarea textarea-bordered w-10/12 py-4"
         />
-        <button className="w-11/12 rounded-xl">Generate</button>
+        <button type="submit" className="w-10/12 rounded-xl">Generate</button>
       </form>
     </div>
   );
