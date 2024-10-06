@@ -4,20 +4,14 @@ const GeneratePainting = () => {
   return (
     <div className="container">
       <Title>GeneratePainting</Title>
-      <form>
-        <fieldset className="form-control w-80">
-          <label className="label">
-            <span className="label-text">Enter your email address</span>
-          </label>
-          <div className="join">
-            <input
-              type="text"
-              placeholder="username@site.com"
-              className="input input-bordered join-item"
-            />
-            <button className="btn join-item">Generate</button>
-          </div>
-        </fieldset>
+
+      <form className="flex flex-wrap gap-3 mt-10 justify-center w-full">
+        <textarea
+          type="text"
+          placeholder="What kind of painting you want ..."
+          className="textarea textarea-bordered w-11/12 py-4"
+        />
+        <button className="w-11/12 rounded-xl">Generate</button>
       </form>
     </div>
   );
