@@ -22,7 +22,7 @@ const Header = () => {
     {
       name: "Generate-Paint",
       path: "/generate",
-      type: "public",
+      type: "private",
     },
   ];
   return (
