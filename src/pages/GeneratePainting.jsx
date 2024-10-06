@@ -1,10 +1,13 @@
 import { useState } from "react";
 import Title from "../components/Title";
+import Loading from "./Loading";
 
 const GeneratePainting = () => {
   const [images, setImages] = useState([]);
+  const [loading, setLoading]=useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     console.log(e.target.prompt.value);
     const form = new FormData();
     form.append("prompt", e.target.prompt.value);
@@ -21,10 +24,14 @@ const GeneratePainting = () => {
         console.log(buffer);
         const blob = new Blob([buffer], { type: "image/jpeg" });
         const image_url = URL.createObjectURL(blob);
-        setImages(image_url);
+        setImages([image_url,...images]);
+        setLoading(false);
         // buffer here is a binary representation of the returned image
       });
   };
+  if (loading) {
+    return <Loading/>
+  }
   return (
     <div className="container">
       <Title>GeneratePainting</Title>
