@@ -5,7 +5,7 @@ import Error from "../pages/Error";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import GeneratePainting from "../pages/GeneratePainting";
-// import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -25,6 +25,10 @@ const MainRoutes = createBrowserRouter([
         path:"/generate",
         element: <GeneratePainting/>,
       },
+{
+  path:"/replies",
+  element:<PrivateRoute><Replies/></PrivateRoute>
+},
       {
         path: "registration",
         element: <Register/>,
