@@ -29,15 +29,14 @@ const Header = () => {
     <nav className="overflow-x-clip">
       {user && (
         <p className="text-center text-white bg-black py-2 bg-opacity-90">
-          Welcome Mr. {user?.displayName} ❤️‍🔥❤️‍🔥. Now You Can Watch All the
-          Recipies🍉🍉
+          Welcome Mr. {user?.displayName} ❤️‍🔥❤️‍🔥.
         </p>
       )}
       <div className="text-center bg-slate-400"></div>
       <div className="w-11/12 mx-auto py-5 flex justify-between items-center relative">
         <Link to="/" className="logo">
           <span className="text-xl font-bold text-stone-700">
-            Leanardo 🎨 Vinci
+          Leonardo🖌Vinci
           </span>
         </Link>
 
