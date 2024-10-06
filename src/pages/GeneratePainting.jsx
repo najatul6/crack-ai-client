@@ -10,7 +10,7 @@ const GeneratePainting = () => {
     fetch("https://clipdrop-api.co/text-to-image/v1", {
       method: "POST",
       headers: {
-        "x-api-key": YOUR_API_KEY,
+        "x-api-key": import.meta.env.VITE_CLIPDROP_API,
       },
       body: form,
     })
