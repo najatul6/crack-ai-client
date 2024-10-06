@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import GeneratePainting from "../pages/GeneratePainting";
 import PrivateRoute from "./PrivateRoute";
+import Replies from "../pages/Replies";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -15,23 +16,27 @@ const MainRoutes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
       },
       {
         path: "login",
-        element: <Login/>,
+        element: <Login />,
       },
       {
-        path:"/generate",
-        element: <GeneratePainting/>,
+        path: "/generate",
+        element: <GeneratePainting />,
       },
-{
-  path:"/replies",
-  element:<PrivateRoute><Replies/></PrivateRoute>
-},
+      {
+        path: "/replies",
+        element: (
+          <PrivateRoute>
+            <Replies />
+          </PrivateRoute>
+        ),
+      },
       {
         path: "registration",
-        element: <Register/>,
+        element: <Register />,
       },
     ],
   },
