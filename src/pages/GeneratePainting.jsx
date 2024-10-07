@@ -55,7 +55,7 @@ const GeneratePainting = () => {
       {/* Category */}
         <div>
           <h2 className="text-xl font-bold">Choose A Category</h2>
-          <div className="space-x-5 space-y-3 flex flex-wrap justify-center items-center">
+          <div className="space-x-3 space-y-2 flex flex-wrap justify-center items-center">
             {painting_categories?.map((category, index) => (
               <button
                 key={index}
@@ -71,7 +71,7 @@ const GeneratePainting = () => {
         {/* Type */}
         <div>
           <h2 className="text-xl font-bold">Choose A Type</h2>
-          <div className="space-x-5 space-y-3 flex flex-wrap justify-center items-center">
+          <div className="space-x-3 space-y-2 flex flex-wrap justify-center items-center">
             {painting_types?.map((type, index) => (
               <button
                 key={index}
