@@ -3,10 +3,10 @@ import Title from "../components/Title";
 import Loading from "./Loading";
 import Swal from "sweetalert2";
 import axios from "axios";
-import  { AuthContext } from "../providers/AuthProvider";
+import { AuthContext } from "../providers/AuthProvider";
 
 const GeneratePainting = () => {
-  const {user}=useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   console.log(user);
   const painting_types = [
     "Oil Painting",
@@ -41,12 +41,10 @@ const GeneratePainting = () => {
     "Contemporary",
     "Naturalistic",
   ];
-  // const [images, setImages] = useState([]);
   const [activeCategory, setActiveCategory] = useState("");
   const [activeType, setActiveType] = useState("");
   const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
-    setLoading(true);
     e.preventDefault();
     const prompt = e.target.prompt.value;
     if (activeCategory?.length === 0) {
@@ -55,16 +53,22 @@ const GeneratePainting = () => {
     if (activeType?.length === 0) {
       return Swal.fire("error", "Please select a type !", "error");
     }
-    if (prompt?.length < 10 && prompt?.length > 30) {
-      return Swal.fire("error", "Your prompt should be between 10 and 30 characters !", "error");
+    if (prompt?.length < 10) {
+      return Swal.fire("error", "Prompt should be at least 10 characters long!", "error");
     }
-    axios.post("http://localhost:5000/paintings/generate")
+    setLoading(true);
+    axios.post("http://localhost:5000/paintings/generate", {
+      prompt,
+      type: activeType,
+      category: activeCategory,
+      email: user?.email,
+    });
   };
   if (loading) {
     return <Loading />;
   }
   return (
-    <div className="container">
+    <div className="container"> 
       <Title>GeneratePainting</Title>
       <div className="grid md:grid-cols-2 mt-10">
         {/* Category */}
