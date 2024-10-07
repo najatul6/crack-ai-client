@@ -36,6 +36,14 @@ const MainRoutes = createBrowserRouter([
         ),
       },
       {
+        path: "/paintings",
+        element: (
+          <PrivateRoute>
+            <Paintings />
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "/paintings/:id",
         element: (
           <PrivateRoute>
