@@ -37,8 +37,8 @@ const GeneratePainting = () => {
     "Naturalistic",
   ];
   // const [images, setImages] = useState([]);
-  const [activeCategory, setActiveCategory] = useState();
-  const [activeType, setActiveType] = useState();
+  const [activeCategory, setActiveCategory] = useState("");
+  const [activeType, setActiveType] = useState("");
   const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     setLoading(true);
