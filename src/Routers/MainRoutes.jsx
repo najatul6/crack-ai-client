@@ -35,6 +35,14 @@ const MainRoutes = createBrowserRouter([
         ),
       },
       {
+        path: "/paintings/:id",
+        element: (
+          <PrivateRoute>
+            <Pain>
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "registration",
         element: <Register />,
       },
