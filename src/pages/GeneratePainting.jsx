@@ -65,13 +65,7 @@ const GeneratePainting = () => {
           Generate
         </button>
       </form>
-      <div className="grid lg:grid-cols-2 gap-3 mt-10">
-        {images?.map((image, index) => (
-          <div key={index}>
-            <img src={image} alt="" className="w-full" />
-          </div>
-        ))}
-      </div>
+      
     </div>
   );
 };
