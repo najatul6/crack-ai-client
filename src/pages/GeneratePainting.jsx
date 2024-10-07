@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Title from "../components/Title";
 import Loading from "./Loading";
 import Swal from "sweetalert2";
+import axios from "axios";
+import AuthProvider from "../providers/AuthProvider";
 
 const GeneratePainting = () => {
+  const {user}=useContext(AuthProvider)
+  console.log(user);
   const painting_types = [
     "Oil Painting",
     "Watercolor Painting",
@@ -54,6 +58,7 @@ const GeneratePainting = () => {
     if (prompt?.length < 10 && prompt?.length > 30) {
       return Swal.fire("error", "Your prompt should be between 10 and 30 characters !", "error");
     }
+    axios.post("http://localhost:5000/paintings/generate")
   };
   if (loading) {
     return <Loading />;
