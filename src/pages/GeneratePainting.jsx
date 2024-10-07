@@ -20,6 +20,23 @@ const GeneratePainting = () => {
     "Abstract Painting",
     "Realistic/Representational Painting"
   ]
+
+  const painting_categories=[
+    "Colorful",
+    "Black and White",
+    "Monochromatic",
+    "Landscape",
+    "Portrait",
+    "Still Life",
+    "Abstract",
+    "Impressionistic",
+    "Realistic",
+    "Surrealistic",
+    "Cultural",
+    "Futuristic",
+    "Contemporary",
+    "Naturalistic",
+  ]
   const [images, setImages] = useState([]);
   const [loading, setLoading]=useState(false);
   const handleSubmit = (e) => {
