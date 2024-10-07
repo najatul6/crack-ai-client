@@ -37,7 +37,7 @@ const GeneratePainting = () => {
     "Contemporary",
     "Naturalistic",
   ];
-  const [images, setImages] = useState([]);
+  // const [images, setImages] = useState([]);
   const [activeCategory, setActiveCategory] = useState();
   const [activeType, setActiveType] = useState();
   const [loading, setLoading] = useState(false);
