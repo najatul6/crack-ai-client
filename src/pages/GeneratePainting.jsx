@@ -51,12 +51,8 @@ const GeneratePainting = () => {
     if (activeType?.length === 0) {
       return Swal.fire("error", "Please select a type !", "error");
     }
-    if (prompt?.length < 10) {
-      return Swal.fire(
-        "error",
-        "Please enter a valid prompt with at least 10 characters!",
-        "error"
-      );
+    if (prompt?.length < 10 && prompt?.length > 30) {
+      return Swal.fire("error", "Your prompt should be between 10 and 30 characters !", "error");
     }
   };
   if (loading) {
