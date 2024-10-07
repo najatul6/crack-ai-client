@@ -44,14 +44,20 @@ const GeneratePainting = () => {
   const handleSubmit = (e) => {
     setLoading(true);
     e.preventDefault();
-    const prompt= e.target.prompt.value;
-    if(activeCategory?.length===0){
-      return Swal.fire('error','Please select a category !','error')
+    const prompt = e.target.prompt.value;
+    if (activeCategory?.length === 0) {
+      return Swal.fire("error", "Please select a category !", "error");
     }
-    if(activeType?.length===0){
-      return Swal.fire('error','Please select a type !','error')
+    if (activeType?.length === 0) {
+      return Swal.fire("error", "Please select a type !", "error");
     }
-    if(prompt)
+    if (prompt?.length < 10) {
+      return Swal.fire(
+        "error",
+        "Please enter a valid prompt with at least 10 characters!",
+        "error"
+      );
+    }
   };
   if (loading) {
     return <Loading />;
@@ -60,8 +66,7 @@ const GeneratePainting = () => {
     <div className="container">
       <Title>GeneratePainting</Title>
       <div className="grid md:grid-cols-2 mt-10">
-
-      {/* Category */}
+        {/* Category */}
         <div>
           <h2 className="text-xl font-bold">Choose A Category</h2>
           <div className="space-x-3 space-y-2 flex flex-wrap justify-center items-center">
@@ -76,7 +81,7 @@ const GeneratePainting = () => {
             ))}
           </div>
         </div>
-            
+
         {/* Type */}
         <div>
           <h2 className="text-xl font-bold">Choose A Type</h2>
