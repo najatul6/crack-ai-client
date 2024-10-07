@@ -64,6 +64,19 @@ const GeneratePainting = () => {
               </button>
             ))}
           </div>
+        <div>
+          <h2 className="text-xl font-bold">Choose A Category</h2>
+          <div className="space-x-5 space-y-3">
+            {painting_categories?.map((category, index) => (
+              <button
+                key={index}
+                className={`${activeCategory === category && "bg-orange-400"}`}
+                onClick={() => setActiveCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
       <form
