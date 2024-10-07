@@ -3,10 +3,10 @@ import Title from "../components/Title";
 import Loading from "./Loading";
 import Swal from "sweetalert2";
 import axios from "axios";
-import AuthProvider from "../providers/AuthProvider";
+import  { AuthContext } from "../providers/AuthProvider";
 
 const GeneratePainting = () => {
-  const {user}=useContext(AuthProvider)
+  const {user}=useContext(AuthContext)
   console.log(user);
   const painting_types = [
     "Oil Painting",
