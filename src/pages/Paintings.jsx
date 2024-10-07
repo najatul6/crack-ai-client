@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom"
+import PaintingCard from "../components/PaintingCard";
 
 const Paintings = () => {
     const data = useLoaderData()

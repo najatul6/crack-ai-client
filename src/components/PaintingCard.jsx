@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 const PaintingCard = ({ painting }) => {
   return (
     <div className="relative hover:mt-2 transition-all duration-200 rounded-lg ">
@@ -12,6 +12,10 @@ const PaintingCard = ({ painting }) => {
       </div>
     </div>
   );
+};
+
+PaintingCard.propTypes = {
+  painting: PropTypes.object.isRequired,
 };
 
 export default PaintingCard;
