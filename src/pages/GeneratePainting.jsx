@@ -6,28 +6,9 @@ const GeneratePainting = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading]=useState(false);
   const handleSubmit = (e) => {
-    e.preventDefault();
     setLoading(true);
-    console.log(e.target.prompt.value);
-    const form = new FormData();
-    form.append("prompt", e.target.prompt.value);
-
-    fetch("https://clipdrop-api.co/text-to-image/v1", {
-      method: "POST",
-      headers: {
-        "x-api-key": import.meta.env.VITE_CLIP_DROP_API,
-      },
-      body: form,
-    })
-      .then((response) => response.arrayBuffer())
-      .then((buffer) => {
-        console.log(buffer);
-        const blob = new Blob([buffer], { type: "image/jpeg" });
-        const image_url = URL.createObjectURL(blob);
-        setImages([image_url,...images]);
-        setLoading(false);
-        // buffer here is a binary representation of the returned image
-      });
+    e.preventDefault();
+    
   };
   if (loading) {
     return <Loading/>
