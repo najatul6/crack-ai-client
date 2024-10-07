@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 const GeneratePainting = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate()
-  console.log(user);
   const painting_types = [
     "Oil Painting",
     "Watercolor Painting",
