@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Title from "../components/Title";
 import Loading from "./Loading";
+import Swal from "sweetalert2";
 
 const GeneratePainting = () => {
   const painting_types = [
@@ -43,6 +44,14 @@ const GeneratePainting = () => {
   const handleSubmit = (e) => {
     setLoading(true);
     e.preventDefault();
+    const prompt= e.target.prompt.value;
+    if(activeCategory?.length===0){
+      return Swal.fire('error','Please select a category !','error')
+    }
+    if(activeType?.length===0){
+      return Swal.fire('error','Please select a type !','error')
+    }
+    if(prompt)
   };
   if (loading) {
     return <Loading />;
