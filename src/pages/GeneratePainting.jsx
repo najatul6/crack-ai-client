@@ -70,7 +70,7 @@ const GeneratePainting = () => {
   return (
     <div className="container"> 
       <Title>GeneratePainting</Title>
-      <div className="grid md:grid-cols-2 mt-10">
+      <div className="grid md:grid-cols-2 gap-3 mt-10">
         {/* Category */}
         <div>
           <h2 className="text-xl font-bold">Choose A Category</h2>
