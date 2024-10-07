@@ -1,6 +1,8 @@
+import { useLoaderData } from "react-router-dom";
 import PaintingCard from "../components/PaintingCard";
 
 const Paintings = () => {
+  const data = useLoaderData();
   return (
     <div className="container">
       <div className="grid md:grid-cols-3 gap-5">
@@ -9,7 +11,7 @@ const Paintings = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Paintings
+export default Paintings;
