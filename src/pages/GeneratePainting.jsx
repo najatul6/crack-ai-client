@@ -3,6 +3,23 @@ import Title from "../components/Title";
 import Loading from "./Loading";
 
 const GeneratePainting = () => {
+  const painting_types=[
+    "Oil Painting",
+    "Watercolor Painting",
+    "Acrylic Painting",
+    "Digital Painting",
+    "Mixed Media Painting",
+    "Gouache Painting",
+    "Pastel Painting",
+    "Globe Painting",
+    "Gouache Painting",
+    "Encaustic Painting",
+    "Fresco Painting",
+    "Impasto Painting",
+    "Miniature Painting",
+    "Abstract Painting",
+    "Realistic/Representational Painting"
+  ]
   const [images, setImages] = useState([]);
   const [loading, setLoading]=useState(false);
   const handleSubmit = (e) => {
