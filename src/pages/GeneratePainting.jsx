@@ -12,7 +12,6 @@ const GeneratePainting = () => {
     "Gouache Painting",
     "Pastel Painting",
     "Globe Painting",
-    "Gouache Painting",
     "Encaustic Painting",
     "Fresco Painting",
     "Impasto Painting",
@@ -51,7 +50,7 @@ const GeneratePainting = () => {
   return (
     <div className="container">
       <Title>GeneratePainting</Title>
-      <div className="grid md:grid-cols-2">
+      <div className="grid md:grid-cols-2 ">
 
       {/* Category */}
         <div>
