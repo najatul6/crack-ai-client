@@ -39,6 +39,7 @@ const GeneratePainting = () => {
   ];
   const [images, setImages] = useState([]);
   const [activeCategory, setActiveCategory] = useState();
+  const [activeType, setActiveType] = useState();
   const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     setLoading(true);
@@ -51,6 +52,8 @@ const GeneratePainting = () => {
     <div className="container">
       <Title>GeneratePainting</Title>
       <div className="grid md:grid-cols-2">
+
+      {/* Category */}
         <div>
           <h2 className="text-xl font-bold">Choose A Category</h2>
           <div className="space-x-5 space-y-3">
@@ -64,16 +67,19 @@ const GeneratePainting = () => {
               </button>
             ))}
           </div>
+        </div>
+
+        {/* Type */}
         <div>
-          <h2 className="text-xl font-bold">Choose A Category</h2>
+          <h2 className="text-xl font-bold">Choose A Type</h2>
           <div className="space-x-5 space-y-3">
-            {painting_categories?.map((category, index) => (
+            {painting_types?.map((type, index) => (
               <button
                 key={index}
-                className={`${activeCategory === category && "bg-orange-400"}`}
-                onClick={() => setActiveCategory(category)}
+                className={`${activeType === type && "bg-orange-400"}`}
+                onClick={() => setActiveType(type)}
               >
-                {category}
+                {type}
               </button>
             ))}
           </div>
