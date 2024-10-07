@@ -4,9 +4,11 @@ import Loading from "./Loading";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { AuthContext } from "../providers/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const GeneratePainting = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate()
   console.log(user);
   const painting_types = [
     "Oil Painting",
@@ -62,7 +64,13 @@ const GeneratePainting = () => {
       type: activeType,
       category: activeCategory,
       email: user?.email,
-    });
+    }).then(res=>{
+      if(res?.data?.insertedId){
+        Swal.fire("success", "Your painting has been generated successfully!", "success");
+        navigate(`/painting/${res?.data?.insertedId}`);
+        setLoading(false);
+      }
+    })
   };
   if (loading) {
     return <Loading />;
