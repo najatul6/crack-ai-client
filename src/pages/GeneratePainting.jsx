@@ -50,7 +50,7 @@ const GeneratePainting = () => {
   return (
     <div className="container">
       <Title>GeneratePainting</Title>
-      <div className="grid md:grid-cols-2 ">
+      <div className="grid md:grid-cols-2 mt-10">
 
       {/* Category */}
         <div>
@@ -86,7 +86,7 @@ const GeneratePainting = () => {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-wrap gap-3 mt-2 justify-center w-full"
+        className="flex flex-wrap gap-3 mt-5 justify-center w-full"
       >
         <textarea
           type="text"
