@@ -7,7 +7,7 @@ import Register from "../pages/Register";
 import GeneratePainting from "../pages/GeneratePainting";
 import PrivateRoute from "./PrivateRoute";
 import Replies from "../pages/Replies";
-import Paingtings from "../pages/Paingtings";
+import Paintings from "../pages/Paintings";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -39,7 +39,7 @@ const MainRoutes = createBrowserRouter([
         path: "/paintings/:id",
         element: (
           <PrivateRoute>
-            <Paingtings/>
+            <Paintings/>
           </PrivateRoute>
         ),
         loader:({params})=>fetch(`http://localhost:5000/paintings/${params.id}`)

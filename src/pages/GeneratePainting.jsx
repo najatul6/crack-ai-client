@@ -67,7 +67,7 @@ const GeneratePainting = () => {
     }).then(res=>{
       if(res?.data?.insertedId){
         Swal.fire("success", "Your painting has been generated successfully!", "success");
-        navigate(`/painting/${res?.data?.insertedId}`);
+        navigate(`/paintings/${res?.data?.insertedId}`);
         setLoading(false);
       }
     })
