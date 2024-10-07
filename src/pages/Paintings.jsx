@@ -6,7 +6,7 @@ const Paintings = () => {
   return (
     <div className="container">
       <div className="grid md:grid-cols-3 gap-5">
-        {data.map((painting) => (
+        {data?.map((painting) => (
           <PaintingCard key={painting._id} painting={painting}></PaintingCard>
         ))}
       </div>
