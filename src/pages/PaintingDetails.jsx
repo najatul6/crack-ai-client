@@ -6,7 +6,7 @@ const PaintingDetails = () => {
     <div className="container">
       <div className="grid md:grid-cols-2 gap">
         <div>
-          <img src={data?.url} alt="" className="w-full" />
+          <img src={data?.imageUrl} alt="" className="w-full" />
         </div>
         <div className="space-y-5">
           <h2 className="text-2xl">{data?.title}</h2>

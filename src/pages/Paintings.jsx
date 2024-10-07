@@ -1,9 +1,6 @@
-import { useLoaderData } from "react-router-dom"
 import PaintingCard from "../components/PaintingCard";
 
 const Paintings = () => {
-    const data = useLoaderData()
-    console.log(data);
   return (
     <div className="container">
       <div className="grid md:grid-cols-3 gap-5">
