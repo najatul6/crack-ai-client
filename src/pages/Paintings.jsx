@@ -3,11 +3,11 @@ import PaintingCard from "../components/PaintingCard";
 
 const Paintings = () => {
   const data = useLoaderData();
-  const reversedData = data?.slice().reverse();
+  // const reversedData = data?.slice().reverse();
   return (
     <div className="container">
       <div className="grid md:grid-cols-3 gap-5">
-        {reversedData?.map((painting) => (
+        {data?.map((painting) => (
           <PaintingCard key={painting._id} painting={painting}></PaintingCard>
         ))}
       </div>
