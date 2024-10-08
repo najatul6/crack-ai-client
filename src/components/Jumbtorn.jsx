@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const Jumbtorn = () => {
   return (
@@ -11,7 +12,9 @@ const Jumbtorn = () => {
           <p className="mt-2 text-sm text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan, nuncet
             tempus blandit, metus mi consectetur nibh.</p>
           <button type="button"
-            className="px-6 py-3 mt-8 rounded-md text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600">Get started</button>
+            className="px-6 py-3 mt-8 rounded-md text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600">
+                <Link to="/generate">Get started</Link>
+            </button>
         </div>
         <img src="https://readymadeui.com/team-image.webp" className="w-full h-full object-cover shrink-0" />
       </div>
