@@ -1,7 +1,7 @@
 
 const Replies = () => {
   return (
-    <div>Replies</div>
+    <div className="min-h-screen flex justify-center items-center font-bold text-7xl">Coming soon</div>
   )
 }
 
