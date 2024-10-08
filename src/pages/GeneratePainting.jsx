@@ -47,6 +47,9 @@ const GeneratePainting = () => {
   const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!user) {
+      return Swal.fire("error", "Please log in to generate a painting!", "error");
+    }
     const prompt = e.target.prompt.value;
     if (activeCategory?.length === 0) {
       return Swal.fire("error", "Please select a category !", "error");
