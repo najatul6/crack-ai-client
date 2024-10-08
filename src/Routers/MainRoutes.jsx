@@ -41,7 +41,7 @@ const MainRoutes = createBrowserRouter([
         element: (
             <Paintings />
         ),
-        loader: () => fetch("http://localhost:5000/paintings/"),
+        loader: () => fetch("http://localhost:5000/paintings"),
       },
       {
         path: "/paintings/:id",

@@ -1,9 +1,9 @@
-import Banner from "../components/Banner";
+import Jumbtorn from "../components/Jumbtorn";
 
 const Home = () => {
   return (
     <>
-      <Banner/>
+    <Jumbtorn/>
     </>
   );
 };
