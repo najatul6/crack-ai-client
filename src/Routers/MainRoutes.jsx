@@ -43,7 +43,7 @@ const MainRoutes = createBrowserRouter([
             <Paintings />
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/api/v1/paintings"),
+        loader: () => fetch("http://localhost:5000/paintings/"),
       },
       {
         path: "/paintings/:id",
