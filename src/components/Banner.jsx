@@ -1,44 +1,29 @@
-// import animation from "../assets/cooking.json";
+import { Link } from "react-router-dom";
 
-// import Lottie from "lottie-react";
-// const Banner = () => {
-//   return (
-//     // <section
-//     //   className="bg-contain bg-fixed"
-//     //   style={{ backgroundImage: "url(/bg.png)" }}
-//     // >
-//     //   <div
-//     //     id="banner"
-//     //     className="flex min-h-screen bg-white bg-opacity-95 flex-col-reverse md:flex-row items-center justify-around "
-//     //   >
-//     //     <div className="text space-y-4  text-center md:text-start ">
-//     //       <h1 className="text-5xl font-bold">
-//     //         Basic <span className="text-orange-400"> Authentication </span>{" "}
-//     //         Template,
-//     //       </h1>
-//     //       <div className=" max-w-[520px] md:rounded-full p-2 bg-orange-400 text-white">
-//     //         <marquee direction="right">
-//     //           For a limited time, enjoy 20% off on all items storewide! Yes, you
-//     //           heard that right! From trendy apparel and stylish accessories to
-//     //           the latest gadgets and home essentials, everything is included in
-//     //           this fantastic offer. Now is the perfect time to refresh your
-//     //           wardrobe, upgrade your tech, or spruce up your living space
-//     //           without breaking the bank.
-//     //         </marquee>
-//     //       </div>
+const Banner = () => {
+  return (
+    <div className="py-15  overflow-y-hidden">
+            {/* Code block starts */}
+            <dh-component>
+                
+                <div className="w-full ">
+                    <div className="mt-8 relative rounded-lg bg-indigo-700 container mx-auto flex flex-col items-center pt-12 sm:pt-24 pb-24 sm:pb-32 md:pb-48 lg:pb-56 xl:pb-64">
+                        <img className="mr-2 lg:mr-12 mt-2 lg:mt-12 absolute right-0 top-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/center_aligned_with_image-svg2.svg" alt="bg" />
+                        <img className="ml-2 lg:ml-12 mb-2 lg:mb-12 absolute bottom-0 left-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/center_aligned_with_image-svg3.svg" alt="bg" />
+                        <div className="w-11/12 sm:w-2/3 flex justify-center items-center">
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-white font-bold leading-tight">The Freedom to Create the Painting You Want</h1>
+                        </div>
+                        <div className="flex justify-center items-center mt-10">
+                            <button className="hover:text-white hover:bg-transparent lg:text-xl hover:border-white border bg-white transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-indigo-700	focus:ring-white rounded text-indigo-700 px-4 sm:px-8 py-1 sm:py-3 text-sm"><Link to="/generate">Get Started</Link></button>
+                           
+                        </div>
+                    </div>
+                    
+                </div>
+            </dh-component>
+            {/* Code block ends */}
+        </div>
+  );
+};
 
-//     //       <h2 className="text-3xl">Build in a best way</h2>
-//     //       <div className="buttons flex gap-3 justify-center md:justify-start">
-//     //         <button className=" ">Join Now</button>
-//     //         <button className=" ">See More</button>
-//     //       </div>
-//     //     </div>
-//     //     <div className="max-w-[400px] ">
-//     //       <Lottie animationData={animation} loop={true} />
-//     //     </div>
-//     //   </div>
-//     // </section>
-//   );
-// };
-
-// export default Banner;
+export default Banner;
