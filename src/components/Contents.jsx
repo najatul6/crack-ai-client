@@ -4,11 +4,11 @@ const Contents = () => {
     <div className="pb-16">
       {/* Code block starts */}
       <dh-component>
-        <section className="max-w-8xl mx-auto container bg-white pt-16">
+        <section className="max-w-8xl mx-auto container pt-16">
           <div>
             <div role="contentinfo" className="flex items-center flex-col px-4">
-              <p tabIndex={0} className="focus:outline-none uppercase text-sm text-center text-gray-600 leading-4">in few easy steps</p>
-              <hh1 tabIndex={0} className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-gray-800 lg:w-5/12 md:w-9/12 pt-4">Create Beautiful Landing Pages &amp; Web Apps in a Jiffy</hh1>
+              
+              <h1 tabIndex={0} className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 text-white lg:w-5/12 md:w-9/12 pt-4">Create Beautiful Landing Pages &amp; Web Apps in a Jiffy</h1>
             </div>
             <div tabIndex={0} aria-label="group of cards" className="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4">
               <div tabIndex={0} aria-label="card 1" className="focus:outline-none flex sm:w-full md:w-5/12 pb-20">
@@ -19,8 +19,8 @@ const Contents = () => {
                   </div>
                 </div>
                 <div className="w-10/12">
-                  <h2 tabIndex={0} className="focus:outline-none text-lg font-bold leading-tight text-gray-800">Ready to use components</h2>
-                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">It provides a very simple start, no need to write a lot of code, you just import it and start the primitive components and create the ones you need.</p>
+                  <h2 tabIndex={0} className="focus:outline-none text-lg font-bold leading-tight text-white">Ready to use components</h2>
+                  <p tabIndex={0} className="focus:outline-none text-base text-gray-400 leading-normal pt-2">It provides a very simple start, no need to write a lot of code, you just import it and start the primitive components and create the ones you need.</p>
                 </div>
               </div>
               <div tabIndex={0} aria-label="card 2" className="focus:outline-none flex sm:w-full md:w-5/12 pb-20">
@@ -31,8 +31,8 @@ const Contents = () => {
                   </div>
                 </div>
                 <div className="w-10/12">
-                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-gray-800">Hight Quality UI you can reply on</h2>
-                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">Modify the visual appearance of your site – including colors, fonts, margins and other style-related properties – with a sophisticated style.</p>
+                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-white">Hight Quality UI you can reply on</h2>
+                  <p tabIndex={0} className="focus:outline-none text-base text-gray-400 leading-normal pt-2">Modify the visual appearance of your site – including colors, fonts, margins and other style-related properties – with a sophisticated style.</p>
                 </div>
               </div>
               <div tabIndex={0} aria-label="card 3" className="focus:outline-none flex sm:w-full md:w-5/12 pb-20">
@@ -43,8 +43,8 @@ const Contents = () => {
                   </div>
                 </div>
                 <div className="w-10/12">
-                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-gray-800">Coded by Developers for Developers</h2>
-                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">Instead of just giving you the tools to create your own site, they offer you a list of themes you can choose from. Thus a handy product.</p>
+                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-white">Coded by Developers for Developers</h2>
+                  <p tabIndex={0} className="focus:outline-none text-base text-gray-400 leading-normal pt-2">Instead of just giving you the tools to create your own site, they offer you a list of themes you can choose from. Thus a handy product.</p>
                 </div>
               </div>
               <div tabIndex={0} aria-label="card 4" className="focus:outline-none flex sm:w-full md:w-5/12 pb-20">
@@ -55,8 +55,8 @@ const Contents = () => {
                   </div>
                 </div>
                 <div className="w-10/12">
-                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-gray-800">The Last UI kit you’ll ever need</h2>
-                  <p tabIndex={0} className="focus:outline-none text-base text-gray-600 leading-normal pt-2">We have chosen the bright color palettes that arouse the only positive emotions. The kit that simply assures to be loved by everyone.</p>
+                  <h2 tabIndex={0} className="focus:outline-none text-lg font-semibold leading-tight text-white">The Last UI kit you’ll ever need</h2>
+                  <p tabIndex={0} className="focus:outline-none text-base text-gray-400 leading-normal pt-2">We have chosen the bright color palettes that arouse the only positive emotions. The kit that simply assures to be loved by everyone.</p>
                 </div>
               </div>
             </div>
