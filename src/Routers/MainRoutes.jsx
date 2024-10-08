@@ -39,9 +39,7 @@ const MainRoutes = createBrowserRouter([
       {
         path: "/paintings",
         element: (
-          <PrivateRoute>
             <Paintings />
-          </PrivateRoute>
         ),
         loader: () => fetch("http://localhost:5000/paintings/"),
       },
